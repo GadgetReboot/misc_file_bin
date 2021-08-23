@@ -1,5 +1,6 @@
 # Orange Micro Crush Amp
 Add an external Speaker jack<BR><BR>
+  The PCB has a 2 pin connector with a black and orange wire going to the built in speaker<BR><BR>
   
 <img src="OA1.JPG"><BR><BR><BR>
 Text info etc <BR><BR>
