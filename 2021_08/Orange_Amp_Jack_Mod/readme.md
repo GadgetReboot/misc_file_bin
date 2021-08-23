@@ -3,8 +3,7 @@ Add an external Speaker jack - Video here: https://youtu.be/7WM6HoQmDgU<BR><BR>
  
   The amp has a 2 pin header on the PCB.  A cable from the internal speaker plugs into the header.<br>
   The speaker cable has a black (ground) and orange (speaker signal) wire.<br><br>
-  
-    <img src="OA1.JPG"><BR><BR><BR>
+  <img src="OA1.JPG"><BR><BR><BR>
   
   The concept is to keep the black wire going on to the built in speaker but to cut/intercept the orange signal wire, then send both sides of the cut orange signal wire, along with the black ground, to a 3 pin mono "switched" 1/4" jack.<br><br>
   
