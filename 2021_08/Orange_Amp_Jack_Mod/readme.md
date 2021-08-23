@@ -14,8 +14,14 @@ Add an external Speaker jack - Video here: https://youtu.be/7WM6HoQmDgU<BR><BR>
   
   
   
-  To keep things as neat as possible and not have a bunch of messy taped up wire solder joints, I removed the 2 pin header from the PCB and soldered it to a scrap proto board, which was screwed into the side of the cabinet to hold it in place.<BR>
-  Then I soldered a red wire to the proto board and connected it (with a solder bridge) to the orange connector pin.<br>
+  To keep things as neat as possible and not have a bunch of messy taped up wire solder joints, I removed the 2 pin header from the PCB and soldered it to a scrap proto board, which was screwed into the side of the cabinet to hold it in place.<BR><br>
+ 
+ Now, with the header taken out of the PCB and re-soldered to this small proto board,<br>
+ I can plug in the original speaker orange/black cable here, and I have to add 3 more wires to this proto board.<br>
+ I need one (red) wire soldered to the header pin that goes to the orange cable wire, <br>
+ and two (green) wires soldered to the header pin that goes to the black cable wire.<br><br>
+ 
+ I soldered a red wire to the proto board and connected it (with a solder bridge) to the orange connector pin.<br>
   I soldered 2 green wires to the proto board and solder bridged those over to the black connector pin.<br>
   <BR>
 <img src="OA2.JPG"><BR><BR><BR>
