@@ -5,7 +5,7 @@ Add an external Speaker jack - Video here: https://youtu.be/7WM6HoQmDgU<BR><BR>
   The speaker cable has a black (ground) and orange (speaker signal) wire.<br><br>
   <img src="OA1.JPG"><BR><BR><BR>
   
-  The concept is to keep the black wire going on to the built in speaker but to cut/intercept the orange signal wire, then send both sides of the cut orange signal wire, along with an extra added ground, to a 3 pin mono "switched" 1/4" jack.<br><br>
+  The concept is to keep the black wire going on to the built in speaker but to cut/intercept the orange signal wire, then send both sides of the cut orange signal wire (from the amp side and speaker side of the orange wire), along with an extra added ground, to a 3 pin mono "switched" 1/4" jack.<br><br>
   
   When nothing is plugged into the jack, the signal from the orange wire coming from the PCB header is connected to the other jack terminal, which is wired to the internal speaker for normal operation.<br><br>
   When a plug is inserted in the jack, the internal speaker is disconnected and the amp signal is connected to the plug (external speaker).<br><br>
