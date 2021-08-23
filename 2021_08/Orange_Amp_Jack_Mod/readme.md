@@ -8,7 +8,8 @@ Add an external Speaker jack - Video here: https://youtu.be/7WM6HoQmDgU<BR><BR>
   The concept is to keep the black wire going on to the built in speaker but to cut/intercept the orange signal wire, then send both sides of the cut orange signal wire, along with an extra added ground, to a 3 pin mono "switched" 1/4" jack.<br><br>
   
   When nothing is plugged into the jack, the signal from the orange wire coming from the PCB header is connected to the other jack terminal, which is wired to the internal speaker for normal operation.<br><br>
-  When a plug is inserted in the jack, the internal speaker is disconnected and the amp signal is connected to the plug (external speaker).<br>
+  When a plug is inserted in the jack, the internal speaker is disconnected and the amp signal is connected to the plug (external speaker).<br><br>
+ 
   Note:  Only insert or remove the plug when the amp is off to prevent damage.  Amplifiers don't like having their inductive loads removed when live.<br>
   
   
@@ -22,14 +23,15 @@ Add an external Speaker jack - Video here: https://youtu.be/7WM6HoQmDgU<BR><BR>
 The red wire (Label A) was then soldered to the left jack terminal as shown. This connects the internal speaker to the jack switch.<BR>
    One of the green wires (Label D) was soldered to the original PCB black ground wire location.<BR>
    The other green wire (Label C) was soldered to the right jack ground terminal.<br>
-   Now the internal speaker as well as the external jack both have a ground connection.<br>
+   Now the internal speaker as well as the external jack both have a ground connection from the PCB.<br>
    Another red wire (Label B) was soldered from the PCB original orange amp signal output location to the jack center terminal.<br>
    This connects the amp signal to a plug, or else to the internal speaker.<br>
    
 <img src="OA3.JPG"><BR><BR><BR>
-Text info etc <BR><BR>
+Closer view of jack/PCB <BR><BR>
+   
 <img src="OA4.JPG"><BR><BR><BR>
-Text info etc <BR><BR>
+Overall connections <BR><BR>
+   
 <img src="OA5.JPG"><BR><BR><BR>
-Text info etc <BR><BR>
-  
+
