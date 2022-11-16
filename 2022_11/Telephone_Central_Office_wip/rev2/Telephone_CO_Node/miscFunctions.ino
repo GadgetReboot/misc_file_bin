@@ -1,6 +1,6 @@
 /*
-    functions belonging to main .INO
-    offload here to keep things readable
+    functions belonging to main top level .INO sketch file
+    offloaded here to keep things uncluttered
 */
 
 // initialize the system status flags to default states
