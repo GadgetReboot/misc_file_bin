@@ -20,7 +20,7 @@
 #include <Wire.h>
 const byte slaveAddr = 0x42;   // I2C address for this device
 
-byte tweakData = 255;          // tweak variable for data received over I2C
+volatile byte tweakData = 255; // tweak variable for data received over I2C
 int ledBlinkDelay = 255;       // led blink rate control variable
 
 void setup() {
