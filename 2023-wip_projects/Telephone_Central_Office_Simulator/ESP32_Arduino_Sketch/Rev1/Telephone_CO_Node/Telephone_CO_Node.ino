@@ -132,48 +132,79 @@ void setup() {
 
   pcf_gpio.begin(0x20, &Wire); // gpio expander address is hard wired to 0x20
 
-
-
   initSysFlags();              // check the system and set status flags
   initSlic();                  // configure SLIC control pins and phone ring cadence based on set region
   initMT8870();                // configure dtmf decoder pins
 
-
-
   // interrupt input for gpio expander input activity monitoring
   pinMode(gpioInt, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(gpioInt), isr, FALLING);
-
-
-
 
   digitalWrite(ringLed, 1);
   pinMode(ringLed, OUTPUT);    // configure ring indicator led
   digitalWrite(relayPin, LOW);
   pinMode(relayPin, OUTPUT);   // configure relay control pin
 
-  callProgressGen.thisIsARecordingStart();
-
 }
 
 void loop() {
   static unsigned long lastEventTime = millis();
   static unsigned long lastEventTime2 = millis();
+  static unsigned long lastEventTime3 = millis();
   static const unsigned long EVENT_INTERVAL_MS = 5000;
-  static const unsigned long WIFI_TEST_INTERVAL_MS = 20000;
+  static const unsigned long testInterval = 5000;
+  static byte testing = 0;
 
   callProgressGen.update();                    // handle mozzi call progress tone gen operations
+
+  if ((millis() - lastEventTime3) > testInterval) {
+    lastEventTime3 = millis();
+    testing++;
+  }
+
+  if (testing == 0) {
+    testing++;
+    callProgressGen.thisIsARecordingStart();
+  }
+
+  if (testing == 2) {
+    testing++;
+    callProgressGen.audioStop();
+    callProgressGen.dialToneStart();
+  }
+
+  if (testing == 4) {
+    testing++;
+    callProgressGen.audioStop();
+    callProgressGen.ringToneStart();
+  }
+
+
+  if (testing == 6) {
+    testing++;
+    callProgressGen.audioStop();
+    callProgressGen.busyToneStart();
+  }
+
+  if (testing == 8) {
+    testing++;
+    callProgressGen.audioStop();
+    callProgressGen.offHookToneStart();
+  }
+
+  if (testing == 10) {
+    testing = 0;
+    callProgressGen.audioStop();
+  }
+
 
   if (wifiMode == wifiServer) {
     if ((millis() - lastEventTime) > EVENT_INTERVAL_MS) {
       lastEventTime = millis();
-      Serial.print("***SLIC Hook State: ");
-      Serial.println(digitalRead(slic_swHook) ? "Off Hook" : "On Hook");
       doServerEvent();
     }
   }
-
-  if (wifiMode == wifiSender) {
+  else if (wifiMode == wifiSender) {
     if (millis() - lastEventTime2 >= EVENT_INTERVAL_MS) {
       // Save the last time a new reading was published
       lastEventTime2 = millis();
